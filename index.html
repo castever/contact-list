@@ -20,28 +20,15 @@
       <p>Welcome to My Contacts.</p>
     </section>
   </div>
-  <ul id="contact-list">
-
-  </ul>
-
+  <ul id="contact-list"></ul>
+  <div id="add-contact-form">
+    <input type="text" id="add-contact-input" placeholder="New Contact" />
+    <button id="add-contact-submit-btn" onclick="addContact(document.getElementById('add-contact-input').value); refreshContactListUI();">Create Contact</button>
+  </div>
+  <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript">
-    /**
-      builds the contact list from the model
-      adds each contact to the #contact-list
-    */
-    function buildContactList() {
-      var listUI = document.getElementById('contact-list');
-
-      var count = model.length;
-      for (i = 0; i < count; i++) {
-        var li = document.createElement('li');
-        var text = document.createTextNode(model[i].name);
-        li.appendChild(text);
-        listUI.appendChild(li);
-      }
-    }
-     //inital load of list
-    buildContactList();
+    //inital load of list
+    buildContactListUI();
   </script>
 
 </body>
