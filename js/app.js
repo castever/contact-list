@@ -37,6 +37,20 @@ function refreshContactListUI() {
   buildContactListUI();
 }
 
+/**
+  handle the user event of clicking on the create contact button
+  add the new contact
+  refresh the UI
+  clear the input field
+*/
+function handleCreateContactUIEvent() {
+  var input = document.getElementById('add-contact-input');
+  addContact(input.value);
+  refreshContactListUI();
+  input.value = "";
+  return false;
+}
+
 function addContact(name) {
   model.push({
     name: name
