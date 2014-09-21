@@ -3,6 +3,17 @@
 
   <head>
       <title>My Contacts</title>
+
+      <script type="text/javascript">
+          var model = [
+            {
+              name: 'George Washington'
+            },
+            {
+              name: 'Thomas Jefferson'
+            }
+          ];
+      </script>
   </head>
   <body>
     <h1>My Contacts</h1>
@@ -11,13 +22,23 @@
         <p>Welcome to My Contacts.</p>
       </section>
     </div>
-    <ul>
-      <li>
-        <p>George Washington</p>
-      </li>
-      <li>
-        <p>Thomas Jefferson</p>
-      </li>
+    <ul id="contact-list">
+
     </ul>
+
+    <script type="text/javascript">
+
+        var listUI = document.getElementById('contact-list');
+
+        var count = model.length;
+        for(i = 0; i < count; i++) {
+            var li = document.createElement('li');
+            var text = document.createTextNode(model[i].name);
+            li.appendChild(text);
+            listUI.appendChild(li);
+        }
+
+    </script>
+
   </body>
 </html>
