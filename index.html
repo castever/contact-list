@@ -1,44 +1,49 @@
 <!doctype html>
 <html lang="en" ng-app>
 
-  <head>
-      <title>My Contacts</title>
+<head>
+  <title>My Contacts</title>
 
-      <script type="text/javascript">
-          var model = [
-            {
-              name: 'George Washington'
-            },
-            {
-              name: 'Thomas Jefferson'
-            }
-          ];
-      </script>
-  </head>
-  <body>
-    <h1>My Contacts</h1>
-    <div id="intro-content">
-      <section id="intro">
-        <p>Welcome to My Contacts.</p>
-      </section>
-    </div>
-    <ul id="contact-list">
+  <script type="text/javascript">
+    var model = [{
+      name: 'George Washington'
+    }, {
+      name: 'Thomas Jefferson'
+    }];
+  </script>
+</head>
 
-    </ul>
+<body>
+  <h1>My Contacts</h1>
+  <div id="intro-content">
+    <section id="intro">
+      <p>Welcome to My Contacts.</p>
+    </section>
+  </div>
+  <ul id="contact-list">
 
-    <script type="text/javascript">
+  </ul>
 
-        var listUI = document.getElementById('contact-list');
+  <script type="text/javascript">
+    /**
+      builds the contact list from the model
+      adds each contact to the #contact-list
+    */
+    function buildContactList() {
+      var listUI = document.getElementById('contact-list');
 
-        var count = model.length;
-        for(i = 0; i < count; i++) {
-            var li = document.createElement('li');
-            var text = document.createTextNode(model[i].name);
-            li.appendChild(text);
-            listUI.appendChild(li);
-        }
+      var count = model.length;
+      for (i = 0; i < count; i++) {
+        var li = document.createElement('li');
+        var text = document.createTextNode(model[i].name);
+        li.appendChild(text);
+        listUI.appendChild(li);
+      }
+    }
+     //inital load of list
+    buildContactList();
+  </script>
 
-    </script>
+</body>
 
-  </body>
 </html>
