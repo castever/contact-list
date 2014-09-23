@@ -1,0 +1,90 @@
+
+
+body {
+
+
+  width: 550px;
+
+
+  margin: 0 auto;
+
+
+  -webkit-font-smoothing: antialiased;
+
+
+  -moz-font-smoothing: antialiased;
+
+
+  -ms-font-smoothing: antialiased;
+
+
+  -o-font-smoothing: antialiased;
+
+
+  font-smoothing: antialiased;
+
+
+}
+
+
+#contact-list-container {
+
+
+  background-color: rgba(237, 238, 240, 0.58);
+
+
+  padding: 10px;
+
+
+}
+
+
+li {
+
+
+  padding: 10px;
+
+
+  margin: 10px 10px 10px 10px;
+
+
+  list-style-type: none;
+
+
+  background-color: #ffffff;
+
+
+  -webkit-box-shadow: 2px 2px 3px 0px rgba(50, 50, 50, 0.55);
+
+
+  -moz-box-shadow: 2px 2px 3px 0px rgba(50, 50, 50, 0.55);
+
+
+  box-shadow: 2px 2px 3px 0px rgba(50, 50, 50, 0.55);
+
+
+}
+
+
+.cl-center {
+
+
+  text-align: center;
+
+
+}
+
+
+div.standout {
+
+
+  -webkit-box-shadow: 2px 2px 3px 0px rgba(50, 50, 50, 0.55);
+
+
+  -moz-box-shadow: 2px 2px 3px 0px rgba(50, 50, 50, 0.55);
+
+
+  box-shadow: 2px 2px 3px 0px rgba(50, 50, 50, 0.55);
+
+
+}
